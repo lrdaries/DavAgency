@@ -105,33 +105,94 @@
         </div>
       </div>
     </div>
+
     <div class="bg-white py-6 shadow">
       <div class="max-w-screen-xl mx-auto px-4 flex items-center justify-between">
         <a href="#" class="text-xl font-bold">THE DAVOR AGENCY</a>
+        <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center gap-6">
           <a href="#home" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Home</a>
           <a href="#about" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">About</a>
           <a href="#service" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Services</a>
           <a href="property.html" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Property</a>
-          <a href="#blog" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Blog</a>
+          <!--<a href="#blog" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Blog</a>-->
           <a href="#contact" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Contact</a>
         </nav>
-        <!--<div class="flex gap-2">
-          <button class="text-gray-600 hover:text-orange-500 flex flex-col items-center text-xs">
-            <ion-icon name="search-outline" class="text-xl"></ion-icon>
-            <span>Search</span>
-          </button>
-          <button class="text-gray-600 hover:text-orange-500 flex flex-col items-center text-xs">
-            <ion-icon name="person-outline" class="text-xl"></ion-icon>
-            <span>Profile</span>
-          </button>
-          <button class="text-gray-600 hover:text-orange-500 flex flex-col items-center text-xs">
-            <ion-icon name="cart-outline" class="text-xl"></ion-icon>
-            <span>Cart</span>
-          </button>
-        </div>-->
       </div>
     </div>
+
+        <!-- Toggle Button (Positioned on the right) -->
+         <div class="md:hidden fixed top-39 right-4 z-50">
+          <button id="mobile-nav-toggle" class="text-gray-600 hover:text-orange-500 text-2xl focus:outline-none">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+<!-- Background Overlay -->
+<div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+
+<!-- Slide-in Menu from the RIGHT -->
+<div id="mobile-nav" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full opacity-0 transition-all duration-300 ease-in-out pointer-events-none">
+  <div class="flex justify-between items-center p-4 border-b">
+    <span class="font-bold text-xl">Menu</span>
+    <button id="mobile-nav-close" class="text-gray-600 hover:text-orange-500 text-2xl focus:outline-none">
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-4 p-6">
+    <a href="#home" class="menu-item">Home</a>
+    <a href="#about" class="menu-item">About</a>
+    <a href="#service" class="menu-item">Services</a>
+    <a href="property.html" class="menu-item">Property</a>
+    <a href="#contact" class="menu-item">Contact</a>
+  </nav>
+</div>
+
+<style>
+
+  .menu-item.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('mobile-nav-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const overlay = document.getElementById('mobile-overlay');
+    const close = document.getElementById('mobile-nav-close');
+    const items = nav.querySelectorAll('.menu-item');
+
+    function openNav() {
+      nav.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+      nav.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+
+      // Stagger animation
+      items.forEach((item, i) => {
+        setTimeout(() => {
+          item.classList.add('show');
+        }, i * 100);
+      });
+    }
+
+    function closeNav() {
+      nav.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+      nav.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+
+      items.forEach(item => item.classList.remove('show'));
+    }
+
+    toggle.addEventListener('click', openNav);
+    close.addEventListener('click', closeNav);
+    overlay.addEventListener('click', closeNav);
+    window.closeMobileNav = closeNav;
+  });
+</script>
   </header>
 
   <main>
@@ -756,41 +817,63 @@
         </div>
       </div>
       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const carousel = document.getElementById('partners-carousel');
-          const items = carousel.children;
-          const itemWidth = items[0].offsetWidth + 32; // min-w + mx-4
-          let currentIndex = 0;
-          const visibleCount = Math.floor(carousel.parentElement.offsetWidth / itemWidth);
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.getElementById('partners-carousel');
+    const originalItems = Array.from(carousel.children);
+    const itemWidth = originalItems[0].offsetWidth + 32; // item width + mx-4
+    const visibleCount = Math.floor(carousel.parentElement.offsetWidth / itemWidth);
+    let currentIndex = 0;
+    let allowTransition = true;
 
-          function slideTo(idx) {
-            carousel.style.transform = `translateX(-${idx * itemWidth}px)`;
-          }
+    // Clone first few items and append to the end
+    for (let i = 0; i < visibleCount; i++) {
+      const clone = originalItems[i].cloneNode(true);
+      carousel.appendChild(clone);
+    }
 
-          document.getElementById('partners-next').addEventListener('click', () => {
-            currentIndex = Math.min(currentIndex + 1, items.length - visibleCount);
-            slideTo(currentIndex);
-          });
+    function slideTo(idx, smooth = true) {
+      allowTransition = smooth;
+      if (!smooth) {
+        carousel.style.transition = "none";
+      } else {
+        carousel.style.transition = "transform 0.5s ease-in-out";
+      }
+      carousel.style.transform = `translateX(-${idx * itemWidth}px)`;
+    }
 
-          document.getElementById('partners-prev').addEventListener('click', () => {
-            currentIndex = Math.max(currentIndex - 1, 0);
-            slideTo(currentIndex);
-          });
+    document.getElementById('partners-next').addEventListener('click', () => {
+      currentIndex++;
+      slideTo(currentIndex);
+    });
 
-          let autoSlide = setInterval(() => {
-            currentIndex = (currentIndex + 1) > (items.length - visibleCount) ? 0 : currentIndex + 1;
-            slideTo(currentIndex);
-          }, 3500);
+    document.getElementById('partners-prev').addEventListener('click', () => {
+      currentIndex = currentIndex <= 0 ? 0 : currentIndex - 1;
+      slideTo(currentIndex);
+    });
 
-          carousel.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlide));
-          carousel.parentElement.addEventListener('mouseleave', () => {
-            autoSlide = setInterval(() => {
-              currentIndex = (currentIndex + 1) > (items.length - visibleCount) ? 0 : currentIndex + 1;
-              slideTo(currentIndex);
-            }, 3500);
-          });
-        });
-      </script>
+    carousel.addEventListener('transitionend', () => {
+      if (currentIndex >= originalItems.length) {
+        // Reset instantly to the start
+        currentIndex = 0;
+        slideTo(currentIndex, false);
+      }
+    });
+
+    let autoSlide = setInterval(() => {
+      currentIndex++;
+      slideTo(currentIndex);
+    }, 3500);
+
+    // Pause on hover
+    carousel.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    carousel.parentElement.addEventListener('mouseleave', () => {
+      autoSlide = setInterval(() => {
+        currentIndex++;
+        slideTo(currentIndex);
+      }, 3500);
+    });
+  });
+</script>
      </section>
   </main>
 
