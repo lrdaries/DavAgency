@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Davor Agency | Abuja's Premier Real Estate Experts</title>
+  <meta name="description" content="The Davor Agency helps you find your dream home in Abuja. Explore luxury villas, apartments, and investment opportunities with expert guidance.">
+  <meta name="keywords" content="Real Estate, Abuja, Davor Agency, Property, Houses for Sale, Apartments, Nigeria Homes">
+  <meta name="author" content="The Davor Agency">
+  <meta property="og:title" content="The Davor Agency | Find Your Dream House in Abuja">
+  <meta property="og:description" content="Browse our listings of premium properties in Abuja. Buy, sell, or rent your next home with The Davor Agency.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davoragency.com">
+  <meta property="og:image" content="./assets/images/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+              }
+    #carousel-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    #carousel-images {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="bg-white overflow-x-hidden text-gray-800">
+  <!-- Header Section -->
+  <header class="sticky top-0 z-20">
+    <div class="bg-black py-4">
+      <div class="max-w-screen-xl mx-auto flex flex-wrap justify-center items-center gap-4 px-4">
+        <ul class="flex flex-wrap justify-center items-center gap-4 text-white text-sm font-bold">
+          <li>
+            <a href="mailto:info@davoragency.com" class="flex items-center gap-1 hover:text-orange-500">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>davoragency@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 hover:text-orange-500">
+              <ion-icon name="location-outline"></ion-icon>
+              <span id="address-link" class="cursor-pointer hover:text-orange-500">
+                <address class="inline">Suite 407, The Fusion Wuye, FCT, Abuja</address>
+              </span>
+              <div id="map-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-white rounded-lg shadow-lg p-4 relative w-full max-w-2xl">
+                  <button id="close-map-modal" class="absolute top-2 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15758.145558215461!2d7.425026!3d9.1059278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b3345541605%3A0x1bb7638373320f5e!2sThe%20Fusion%20Wuye!5e0!3m2!1sen!2sng!4v1752579937761!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  const addressLink = document.getElementById('address-link');
+                  const mapModal = document.getElementById('map-modal');
+                  const closeMapModal = document.getElementById('close-map-modal');
+                  addressLink.addEventListener('click', () => {
+                    mapModal.classList.remove('hidden');
+                  });
+                  closeMapModal.addEventListener('click', () => {
+                    mapModal.classList.add('hidden');
+                  });
+                  mapModal.addEventListener('click', (e) => {
+                    if (e.target === mapModal) mapModal.classList.add('hidden');
+                  });
+                });
+              </script>
+              
+            </a>
+          </li>
+        </ul>
+        <div class="flex items-center gap-4 ml-auto">
+          <ul class="flex items-center gap-2 text-white text-lg">
+            <li><a href="https://web.facebook.com/profile.php?id=61575939821333"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/thedavoragency?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <!--<li><a href="#"><ion-icon name="logo-pinterest"></ion-icon></a></li>-->
+          </ul>
+          <a href="listing.html"><button class="bg-[#ff5733] text-white text-sm font-bold py-1 px-4 hover:bg-[#e04e2d]">Add Listing</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white py-6 shadow">
+      <div class="max-w-screen-xl mx-auto px-4 flex items-center justify-between">
+        <a href="#" class="text-xl font-bold">THE DAVOR AGENCY</a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="#home" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Home</a>
+          <a href="#about" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">About</a>
+          <a href="#service" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Services</a>
+          <a href="property.html" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Property</a>
+          <a href="#blog" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Blog</a>
+          <a href="#contact" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Contact</a>
+        </nav>
+        <!--<div class="flex gap-2">
+          <button class="text-gray-600 hover:text-orange-500 flex flex-col items-center text-xs">
+            <ion-icon name="search-outline" class="text-xl"></ion-icon>
+            <span>Search</span>
+          </button>
+          <button class="text-gray-600 hover:text-orange-500 flex flex-col items-center text-xs">
+            <ion-icon name="person-outline" class="text-xl"></ion-icon>
+            <span>Profile</span>
+          </button>
+          <button class="text-gray-600 hover:text-orange-500 flex flex-col items-center text-xs">
+            <ion-icon name="cart-outline" class="text-xl"></ion-icon>
+            <span>Cart</span>
+          </button>
+        </div>-->
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-[#f1f5f9] py-24" id="home">
+      <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-2 items-center">
+        <div class="mb-10 md:mb-0">
+          <p class="flex items-center gap-2 text-sm font-bold text-orange-500 mb-4">
+            <ion-icon name="home"></ion-icon>
+            <span>Real Estate Agency</span>
+          </p>
+          <h2 class="text-4xl font-bold text-[#032b2e] leading-tight mb-4">Find Your Dream House By Us</h2>
+          <p class="text-gray-600 text-sm border-l-2 border-gray-400 pl-4 mb-6">
+           The Davor Agency is a leading real estate agency that specializes in helping clients find their dream homes. With a team of experienced professionals, we provide personalized service and expert advice to ensure a smooth and successful home buying experience.
+          </p>
+          <button class="bg-[#ff5733] text-white font-semibold py-2 px-5 hover:bg-black hover:text-white transition">Make An Enquiry</button>
+        </div>
+          <div class="relative w-full h-80 flex items-center justify-center">
+            <!-- Carousel Images -->
+            <div id="carousel-images" class="w-full h-80 overflow-hidden rounded-lg relative">
+              <img src="IMG-20250710-WA0003.jpg" class="absolute inset-0 w-fit h-fit object-cover object-center transition-opacity duration-700 opacity-100" style="aspect-ratio: auto;"/>
+              <img src="IMG-20250710-WA0004.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+              <img src="IMG-20250710-WA0005.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            </div>
+            <!-- Left Arrow -->
+            <button id="carousel-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow text-gray-700 z-10">
+              <ion-icon name="chevron-back-outline" class="text-2xl"></ion-icon>
+            </button>
+            <!-- Right Arrow -->
+            <button id="carousel-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow text-gray-700 z-10">
+              <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+            </button>
+          </div>
+          <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('#carousel-images img');
+      let current = 0;
+      let interval;
+
+      function showImage(idx) {
+        images.forEach((img, i) => {
+          img.style.opacity = i === idx ? '1' : '0';
+          img.style.zIndex = i === idx ? '1' : '0';
+        });
+      }
+
+      function nextImage() {
+        current = (current + 1) % images.length;
+        showImage(current);
+      }
+
+      function prevImage() {
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+      }
+
+      document.getElementById('carousel-next').addEventListener('click', () => {
+        nextImage();
+        resetInterval();
+      });
+
+      document.getElementById('carousel-prev').addEventListener('click', () => {
+        prevImage();
+        resetInterval();
+      });
+
+      function startInterval() {
+        interval = setInterval(nextImage, 4000);
+      }
+
+      function resetInterval() {
+        clearInterval(interval);
+        startInterval();
+      }
+
+      showImage(current);
+      startInterval();
+    });
+  </script>
+        </div>
+    </section>
+          
+
+          <section>
+            <div class="mt-10 max-w-screen-xl mx-auto px-4 py-12">
+              <h3 class="text-2xl font-semibold text-[#032b2e] text-center mb-4">Featured Properties</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center justify-center text-center">
+                  <img src="frames-for-your-heart-mR1CIDduGLc-unsplash.jpg" alt="Property 1" class="w-full h-48 object-cover">
+                  <div class="p-4 flex flex-col items-center">
+                    <h4 class="text-lg font-semibold text-[#032b2e]">Luxury Villa</h4>
+                    <p class="text-gray-600">$1,200,000</p>
+                    <button class="mt-2 bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black" id="view-details-btn-1">View Details</button>
+                    <!-- Animated Modal Section -->
+                    <div id="property-modal-1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+                      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4 sm:mx-0 p-4 sm:p-8 relative animate-fade-in-up overflow-y-auto max-h-[90vh]">
+                        <button id="close-modal-1" class="absolute top-3 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                        <img src="frames-for-your-heart-mR1CIDduGLc-unsplash.jpg" alt="Luxury Villa" class="w-full h-48 object-cover rounded mb-4">
+                        <h3 class="text-2xl font-bold text-[#032b2e] mb-4">Luxury Villa</h3>
+                        <p class="text-gray-700 mb-4">
+                          Experience the epitome of luxury living in this stunning villa featuring 5 bedrooms, a private pool, modern amenities, and breathtaking views. Perfect for families seeking comfort and elegance in Abuja's most prestigious neighborhood.
+                        </p>
+                        <div class="mb-2">
+                          <span class="font-semibold text-gray-800">Contact Information:</span>
+                          <ul class="mt-2 space-y-1 text-gray-700 text-sm">
+                            <li>
+                              <ion-icon name="mail-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="mailto:info@davoragency.com" class="hover:underline">davoragency@gmail.com</a>
+                            </li>
+                            <li>
+                              <ion-icon name="call-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="tel:+2347061612268" class="hover:underline">+2347061612268</a>
+                            </li>
+                            <li>
+                              <ion-icon name="logo-whatsapp" class="mr-1 text-green-500"></ion-icon>
+                              <a href="https://wa.me/2347061612268" target="_blank" class="hover:underline">+2347061612268</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <style>
+                        @keyframes fade-in-up {
+                          0% { opacity: 0; transform: translateY(40px);}
+                          100% { opacity: 1; transform: translateY(0);}
+                        }
+                        .animate-fade-in-up {
+                          animation: fade-in-up 0.4s cubic-bezier(.4,0,.2,1);
+                        }
+                      </style>
+                    </div>
+                    <script>
+                      // Modal open/close logic for property 1
+                      document.addEventListener('DOMContentLoaded', function () {
+                        const btn = document.getElementById('view-details-btn-1');
+                        const modal = document.getElementById('property-modal-1');
+                        const close = document.getElementById('close-modal-1');
+                        btn.addEventListener('click', () => {
+                          modal.classList.remove('hidden');
+                        });
+                        close.addEventListener('click', () => {
+                          modal.classList.add('hidden');
+                        });
+                        // Optional: close modal on background click
+                        modal.addEventListener('click', (e) => {
+                          if (e.target === modal) modal.classList.add('hidden');
+                        });
+                      });
+                    </script>
+                  </div>
+                </div>
+
+                <!-- Repeat similar structure for other properties -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center justify-center text-center">
+                  <img src="samson-vowles-f5QahUP8PJ0-unsplash.jpg" alt="Property 2" class="w-full h-48 object-cover">
+                  <div class="p-4 flex flex-col items-center">
+                    <h4 class="text-lg font-semibold text-[#032b2e]">Modern Apartment</h4>
+                    <p class="text-gray-600">$850,000</p>
+                    <button class="mt-2 bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black" id="view-details-btn-2">View Details</button>
+                    <!-- Animated Modal Section -->
+                    <div id="property-modal-2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+                      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4 sm:mx-0 p-4 sm:p-8 relative animate-fade-in-up overflow-y-auto max-h-[90vh]">
+                        <button id="close-modal-2" class="absolute top-3 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                        <img src="samson-vowles-f5QahUP8PJ0-unsplash.jpg" alt="Modern Apartment" class="w-full h-48 object-cover rounded mb-4">
+                        <h3 class="text-2xl font-bold text-[#032b2e] mb-4">Modern Apartment</h3>
+                        <p class="text-gray-700 mb-4">
+                          Discover urban living at its finest in this modern apartment featuring 3 bedrooms, open-plan living spaces, and top-notch security. Located in the heart of Abuja, it's perfect for professionals and families alike.
+                        </p>
+                        <div class="mb-2">
+                          <span class="font-semibold text-gray-800">Contact Information:</span>
+                          <ul class="mt-2 space-y-1 text-gray-700 text-sm">
+                            <li>
+                              <ion-icon name="mail-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="mailto:davoragency@gmail.com" class="hover:underline">davoragency@gmail.com</a>
+                            </li>
+                            <li>
+                              <ion-icon name="call-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="tel:+2347061612268" class="hover:underline">+2347061612268</a>
+                            </li>
+                            <li>
+                              <ion-icon name="logo-whatsapp" class="mr-1 text-green-500"></ion-icon>
+                              <a href="https://wa.me/2347061612268" target="_blank" class="hover:underline">+2347061612268</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <style>
+                        @keyframes fade-in-up {
+                          0% { opacity: 0; transform: translateY(40px);}
+                          100% { opacity: 1; transform: translateY(0);}
+                        }
+                        .animate-fade-in-up {
+                          animation: fade-in-up 0.4s cubic-bezier(.4,0,.2,1);
+                        }
+                      </style>
+                    </div>
+                    <script>
+                      // Modal open/close logic for property 2
+                      document.addEventListener('DOMContentLoaded', function () {
+                        const btn2 = document.getElementById('view-details-btn-2');
+                        const modal2 = document.getElementById('property-modal-2');
+                        const close2 = document.getElementById('close-modal-2');
+                        btn2.addEventListener('click', () => {
+                          modal2.classList.remove('hidden');
+                        });
+                        close2.addEventListener('click', () => {
+                          modal2.classList.add('hidden');
+                        });
+                        // Optional: close modal on background click
+                        modal2.addEventListener('click', (e) => {
+                          if (e.target === modal2) modal2.classList.add('hidden');
+                        });
+                      });
+                    </script></p></div>
+                  </div>
+
+                <!-- Property 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center justify-center text-center">
+                  <img src="dhruv-saran-mehra-EItAcdPP-kk-unsplash.jpg" alt="Property 3" class="w-full h-48 object-cover">
+                  <div class="p-4 flex flex-col items-center">
+                    <h4 class="text-lg font-semibold text-[#032b2e]">Cozy Cottage</h4>
+                    <p class="text-gray-600">$500,000</p>
+                    <button class="mt-2 bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black" id="view-details-btn-3">View Details</button>
+                    <!-- Animated Modal Section -->
+                    <div id="property-modal-3" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+                      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4 sm:mx-0 p-4 sm:p-8 relative animate-fade-in-up overflow-y-auto max-h-[90vh]">
+                        <button id="close-modal-3" class="absolute top-3 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                        <img src="dhruv-saran-mehra-EItAcdPP-kk-unsplash.jpg" alt="Cozy Cottage" class="w-full h-48 object-cover rounded mb-4">
+                        <h3 class="text-2xl font-bold text-[#032b2e] mb-4">Cozy Cottage</h3>
+                        <p class="text-gray-700 mb-4">
+                          Enjoy peaceful living in this charming cottage featuring 2 bedrooms, a lush garden, and a warm, inviting atmosphere. Ideal for couples or small families looking for comfort and tranquility in Abuja.
+                        </p>
+                        <div class="mb-2">
+                          <span class="font-semibold text-gray-800">Contact Information:</span>
+                          <ul class="mt-2 space-y-1 text-gray-700 text-sm">
+                            <li>
+                              <ion-icon name="mail-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="mailto:info@davoragency.com" class="hover:underline">davoragency@gmail.com</a>
+                            </li>
+                            <li>
+                              <ion-icon name="call-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="tel:+2347061612268" class="hover:underline">+2347061612268</a>
+                            </li>
+                            <li>
+                              <ion-icon name="logo-whatsapp" class="mr-1 text-green-500"></ion-icon>
+                              <a href="https://wa.me/+2347061612268" target="_blank" class="hover:underline">+2347061612268</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <style>
+                        @keyframes fade-in-up {
+                          0% { opacity: 0; transform: translateY(40px);}
+                          100% { opacity: 1; transform: translateY(0);}
+                        }
+                        .animate-fade-in-up {
+                          animation: fade-in-up 0.4s cubic-bezier(.4,0,.2,1);
+                        }
+                      </style>
+                    </div>
+                    <script>
+                      // Modal open/close logic for property 3
+                      document.addEventListener('DOMContentLoaded', function () {
+                        const btn3 = document.getElementById('view-details-btn-3');
+                        const modal3 = document.getElementById('property-modal-3');
+                        const close3 = document.getElementById('close-modal-3');
+                        btn3.addEventListener('click', () => {
+                          modal3.classList.remove('hidden');
+                        });
+                        close3.addEventListener('click', () => {
+                          modal3.classList.add('hidden');
+                        });
+                        // Optional: close modal on background click
+                        modal3.addEventListener('click', (e) => {
+                          if (e.target === modal3) modal3.classList.add('hidden');
+                        });
+                      });
+                    </script>
+                  </div>
+                </div>
+
+                <!-- Property 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center justify-center text-center">
+                  <img src="krzysztof-hepner-978RAXoXnH4-unsplash.jpg" alt="Property 4" class="w-full h-100 object-center">
+                  <div class="p-4 flex flex-col items-center">
+                    <h4 class="text-lg font-semibold text-[#032b2e]">Spacious Family Home</h4>
+                    <p class="text-gray-600">$950,000</p>
+                    <button class="mt-2 bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black" id="view-details-btn-4">View Details</button>
+                    <!-- Animated Modal Section -->
+                    <div id="property-modal-4" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+                      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4 sm:mx-0 p-4 sm:p-8 relative animate-fade-in-up overflow-y-auto max-h-[90vh]">
+                        <button id="close-modal-4" class="absolute top-3 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                        <img src="krzysztof-hepner-978RAXoXnH4-unsplash.jpg" alt="Spacious Family Home" class="w-full h-48 object-cover rounded mb-4">
+                        <h3 class="text-2xl font-bold text-[#032b2e] mb-4">Spacious Family Home</h3>
+                        <p class="text-gray-700 mb-4">
+                          This spacious family home offers 4 bedrooms, a large living area, modern kitchen, and a beautiful backyard. Perfect for growing families seeking comfort and convenience in a prime Abuja location.
+                        </p>
+                        <div class="mb-2">
+                          <span class="font-semibold text-gray-800">Contact Information:</span>
+                          <ul class="mt-2 space-y-1 text-gray-700 text-sm">
+                            <li>
+                              <ion-icon name="mail-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="mailto:info@davoragency.com" class="hover:underline">davoragency@gmail.com</a>
+                            </li>
+                            <li>
+                              <ion-icon name="call-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="tel:+2347061612268" class="hover:underline">+2347061612268</a>
+                            </li>
+                            <li>
+                              <ion-icon name="logo-whatsapp" class="mr-1 text-green-500"></ion-icon>
+                              <a href="https://wa.me/+2347061612268" target="_blank" class="hover:underline">+2347061612268</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <style>
+                        @keyframes fade-in-up {
+                          0% { opacity: 0; transform: translateY(40px);}
+                          100% { opacity: 1; transform: translateY(0);}
+                        }
+                        .animate-fade-in-up {
+                          animation: fade-in-up 0.4s cubic-bezier(.4,0,.2,1);
+                        }
+                      </style>
+                    </div>
+                    <script>
+                      // Modal open/close logic for property 4
+                      document.addEventListener('DOMContentLoaded', function () {
+                        const btn4 = document.getElementById('view-details-btn-4');
+                        const modal4 = document.getElementById('property-modal-4');
+                        const close4 = document.getElementById('close-modal-4');
+                        btn4.addEventListener('click', () => {
+                          modal4.classList.remove('hidden');
+                        });
+                        close4.addEventListener('click', () => {
+                          modal4.classList.add('hidden');
+                        });
+                        // Optional: close modal on background click
+                        modal4.addEventListener('click', (e) => {
+                          if (e.target === modal4) modal4.classList.add('hidden');
+                        });
+                      });
+                    </script></div>
+                  </div>
+
+                <!-- Property 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center justify-center text-center">
+                  <img src="property-1.jpg" alt="Property 5" class="w-full h-100 object-cover">
+                  <div class="p-4 flex flex-col items-center">
+                    <h4 class="text-lg font-semibold text-[#032b2e]">Charming Bungalow</h4>
+                    <p class="text-gray-600">$600,000</p>
+                    <button class="mt-2 bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black" id="view-details-btn-5">View Details</button>
+                    <!-- Animated Modal Section -->
+                    <div id="property-modal-5" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+                      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4 sm:mx-0 p-4 sm:p-8 relative animate-fade-in-up overflow-y-auto max-h-[90vh]">
+                        <button id="close-modal-5" class="absolute top-3 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                        <img src="property-1.jpg" alt="Charming Bungalow" class="w-full h-48 object-cover rounded mb-4">
+                        <h3 class="text-2xl font-bold text-[#032b2e] mb-4">Charming Bungalow</h3>
+                        <p class="text-gray-700 mb-4">
+                          Discover this charming bungalow featuring 3 bedrooms, a spacious living area, and a serene garden. Perfect for those seeking comfort and style in a peaceful Abuja neighborhood.
+                        </p>
+                        <div class="mb-2">
+                          <span class="font-semibold text-gray-800">Contact Information:</span>
+                          <ul class="mt-2 space-y-1 text-gray-700 text-sm">
+                            <li>
+                              <ion-icon name="mail-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="mailto:info@davoragency.com" class="hover:underline">davoragency@gmail.com</a>
+                            </li>
+                            <li>
+                              <ion-icon name="call-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="tel:+2347061612268" class="hover:underline">+2347061612268</a>
+                            </li>
+                            <li>
+                              <ion-icon name="logo-whatsapp" class="mr-1 text-green-500"></ion-icon>
+                              <a href="https://wa.me/+2347061612268" target="_blank" class="hover:underline">+2347061612268</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <style>
+                        @keyframes fade-in-up {
+                          0% { opacity: 0; transform: translateY(40px);}
+                          100% { opacity: 1; transform: translateY(0);}
+                        }
+                        .animate-fade-in-up {
+                          animation: fade-in-up 0.4s cubic-bezier(.4,0,.2,1);
+                        }
+                      </style>
+                    </div>
+                    <script>
+                      // Modal open/close logic for property 5
+                      document.addEventListener('DOMContentLoaded', function () {
+                        const btn5 = document.getElementById('view-details-btn-5');
+                        const modal5 = document.getElementById('property-modal-5');
+                        const close5 = document.getElementById('close-modal-5');
+                        btn5.addEventListener('click', () => {
+                          modal5.classList.remove('hidden');
+                        });
+                        close5.addEventListener('click', () => {
+                          modal5.classList.add('hidden');
+                        });
+                        // Optional: close modal on background click
+                        modal5.addEventListener('click', (e) => {
+                          if (e.target === modal5) modal5.classList.add('hidden');
+                        });
+                      });
+                    </script></div>
+                  </div>
+
+                <!-- Property 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center justify-center text-center">
+                  <img src="luke-van-zyl-koH7IVuwRLw-unsplash.jpg" alt="Property 6" class="w-100 h-100 object-cover">
+                  <div class="p-4 flex flex-col items-center">
+                    <h4 class="text-lg font-semibold text-[#032b2e]">Elegant Townhouse</h4>
+                    <p class="text-gray-600">$1,100,000</p>
+                    <button class="mt-2 bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black" id="view-details-btn-6">View Details</button>
+                    <!-- Animated Modal Section -->
+                    <div id="property-modal-6" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+                      <div class="bg-white rounded-lg shadow-lg w-full max-w-md mx-4 sm:mx-0 p-4 sm:p-8 relative animate-fade-in-up overflow-y-auto max-h-[90vh]">
+                        <button id="close-modal-6" class="absolute top-3 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                        <img src="luke-van-zyl-koH7IVuwRLw-unsplash.jpg" alt="Elegant Townhouse" class="w-full h-48 object-cover rounded mb-4">
+                        <h3 class="text-2xl font-bold text-[#032b2e] mb-4">Elegant Townhouse</h3>
+                        <p class="text-gray-700 mb-4">
+                          Step into elegance with this beautiful townhouse offering 4 bedrooms, modern finishes, and a private terrace. Located in a secure estate, it's ideal for families seeking luxury and convenience in Abuja.
+                        </p>
+                        <div class="mb-2">
+                          <span class="font-semibold text-gray-800">Contact Information:</span>
+                          <ul class="mt-2 space-y-1 text-gray-700 text-sm">
+                            <li>
+                              <ion-icon name="mail-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="mailto:info@davoragency.com" class="hover:underline">davoragency@gmail.com</a>
+                            </li>
+                            <li>
+                              <ion-icon name="call-outline" class="mr-1 text-orange-500"></ion-icon>
+                              <a href="tel:+2347061612268" class="hover:underline">+2347061612268</a>
+                            </li>
+                            <li>
+                              <ion-icon name="logo-whatsapp" class="mr-1 text-green-500"></ion-icon>
+                              <a href="https://wa.me/+2347061612268" target="_blank" class="hover:underline">+2347061612268</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <style>
+                        @keyframes fade-in-up {
+                          0% { opacity: 0; transform: translateY(40px);}
+                          100% { opacity: 1; transform: translateY(0);}
+                        }
+                        .animate-fade-in-up {
+                          animation: fade-in-up 0.4s cubic-bezier(.4,0,.2,1);
+                        }
+                      </style>
+                    </div>
+                    <script>
+                      // Modal open/close logic for property 6
+                      document.addEventListener('DOMContentLoaded', function () {
+                        const btn6 = document.getElementById('view-details-btn-6');
+                        const modal6 = document.getElementById('property-modal-6');
+                        const close6 = document.getElementById('close-modal-6');
+                        btn6.addEventListener('click', () => {
+                          modal6.classList.remove('hidden');
+                        });
+                        close6.addEventListener('click', () => {
+                          modal6.classList.add('hidden');
+                        });
+                        // Optional: close modal on background click
+                        modal6.addEventListener('click', (e) => {
+                          if (e.target === modal6) modal6.classList.add('hidden');
+                        });
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
+          </section>
+        <section class="bg-white py-24" id="service">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-[#032b2e] mb-8 text-center">Our Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Property Management</h3>
+            <p class="text-gray-600 mb-4">We manage your properties efficiently, ensuring maximum returns on your investments.</p>
+            <button class="bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black">Learn More</button>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Real Estate Consulting</h3>
+            <p class="text-gray-600 mb-4">Our experts provide insights and strategies to help you make informed real estate decisions.</p>
+            <button class="bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black">Learn More</button>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Home Buying Assistance</h3>
+            <p class="text-gray-600 mb-4">We guide you through the home buying process, making it smooth and hassle-free.</p>
+            <button class="bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black">Learn More</button>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Property Valuation</h3>
+            <p class="text-gray-600 mb-4">Get accurate property valuations to help you make the right investment choices.</p>
+            <button class="bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black">Learn More</button>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Market Analysis</h3>
+            <p class="text-gray-600 mb-4">We provide detailed market analysis to help you understand current trends and opportunities.</p>
+            <button class="bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black">Learn More</button>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Investment Opportunities</h3>
+            <p class="text-gray-600 mb-4">Explore lucrative investment opportunities with our expert guidance.</p>
+            <button class="bg-[#ff5733] text-white py-2 px-4 rounded hover:bg-black">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-100 py-24" id="about">
+      <div class="max-w-screen-xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-[#032b2e] mb-8 text-center">About Us</h2>
+      <p class="text-gray-600 text-lg mb-6">
+        The Davor Agency is a premier real estate agency dedicated to helping clients find their dream homes. With a team of experienced professionals, we provide personalized service and expert advice to ensure a smooth and successful home buying experience.
+      </p>
+      <p class="text-gray-600 text-lg">
+        Our mission is to make the real estate process as seamless as possible, whether you're buying, selling, or renting a property. We pride ourselves on our integrity, transparency, and commitment to excellence.
+      </p>
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Our Vision</h3>
+          <p class="text-gray-600">To be the leading real estate agency known for exceptional service and client satisfaction.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Our Mission</h3>
+          <p class="text-gray-600">To provide unparalleled real estate services that exceed client expectations and build lasting relationships.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold text-[#032b2e] mb-4">Our Values</h3>
+          <p class="text-gray-600">Integrity, transparency, excellence, and client-centric service are at the core of everything we do.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+      <div class="mt-16 max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg" id="contact">
+        <h2 class="text-2xl font-bold text-[#032b2e] mb-6 text-center">Contact Us</h2>
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+            <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Your Name">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="you@email.com">
+          </div>
+          <div>
+            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Type your message here..."></textarea>
+          </div>
+          <button type="submit" class="w-full bg-[#ff5733] text-white font-semibold py-2 px-4 rounded hover:bg-black transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="bg-[#f1f5f9] py-24" id="testimonials">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-[#032b2e] mb-8 text-center">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1" class="w-20 h-20 rounded-full mb-4 shadow">
+            <p class="text-gray-700 mb-4 italic">"The Davor Agency made buying our dream home a breeze. Their professionalism and attention to detail were outstanding!"</p>
+            <span class="font-semibold text-[#032b2e]">John Okoro</span>
+            <span class="text-sm text-gray-500">Homeowner</span>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 2" class="w-20 h-20 rounded-full mb-4 shadow">
+            <p class="text-gray-700 mb-4 italic">"Excellent service and great advice throughout the process. Highly recommended for anyone looking for property in Abuja."</p>
+            <span class="font-semibold text-[#032b2e]">Amina Yusuf</span>
+            <span class="text-sm text-gray-500">Investor</span>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+            <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Client 3" class="w-20 h-20 rounded-full mb-4 shadow">
+            <p class="text-gray-700 mb-4 italic">"They helped me find the perfect apartment and handled everything smoothly. I felt supported every step of the way."</p>
+            <span class="font-semibold text-[#032b2e]">Samuel Eze</span>
+            <span class="text-sm text-gray-500">Tenant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Add more sections like About, Services, Property, Blog, etc. here using Tailwind -->
+     <section>
+      <div class="max-w-screen-xl mx-auto px-4 py-12">
+        <h3 class="text-2xl font-semibold text-[#032b2e] text-center mb-8">Our Partners</h3>
+        <div class="relative">
+          <div id="partners-carousel" class="flex transition-transform duration-700 ease-in-out" style="transform: translateX(0);">
+            <div class="min-w-[200px] flex flex-col items-center mx-4">
+              <img src="data:image/jpeg;base64,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" alt="Partner 1" class="w-32 h-32 object-contain mb-2 rounded-lg shadow">
+              <span class="text-lg font-bold text-gray-700">Federal Capital Territory Administration</span>
+            </div>
+            <div class="min-w-[200px] flex flex-col items-center mx-4">
+              <img src="data:image/jpeg;base64,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" alt="Partner 2" class="w-32 h-32 object-contain mb-2 rounded-lg shadow">
+              <span class="text-lg font-bold text-gray-700">Nigerian Maritime Administration and Safety Agency</span>
+            </div>
+            <div class="min-w-[200px] flex flex-col items-center mx-4">
+              <img src="data:image/jpeg;base64,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" alt="Partner 3" class="w-32 h-32 object-contain mb-2 rounded-lg shadow">
+              <span class="text-lg font-bold text-gray-700">Nigerian National Petroleum Corporation</span>
+            </div>
+            <div class="min-w-[200px] flex flex-col items-center mx-4">
+              <img src="data:image/png;base64,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" alt="Partner 4" class="w-32 h-32 object-contain mb-2 rounded-lg shadow">
+              <span class="text-lg font-bold text-gray-700">Central Bank of Nigeria</span>
+            </div>
+            <div class="min-w-[200px] mx-4">
+              <img src="20250221_114448.png" alt="Partner Logo" class="w-32 h-32 object-contain mb-2 rounded-lg shadow">
+              <span class="text-lg font-bold text-gray-700">Compgram Technologies</span>
+            </div>
+
+            <!-- Add more partners as needed -->
+          </div>
+          <button id="partners-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-orange-500 rounded-full p-2 shadow text-gray-700 z-10">
+            <ion-icon name="chevron-back-outline" class="text-2xl"></ion-icon>
+          </button>
+          <button id="partners-next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-orange-500 rounded-full p-2 shadow text-gray-700 z-10">
+            <ion-icon name="chevron-forward-outline" class="text-2xl"></ion-icon>
+          </button>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const carousel = document.getElementById('partners-carousel');
+          const items = carousel.children;
+          const itemWidth = items[0].offsetWidth + 32; // min-w + mx-4
+          let currentIndex = 0;
+          const visibleCount = Math.floor(carousel.parentElement.offsetWidth / itemWidth);
+
+          function slideTo(idx) {
+            carousel.style.transform = `translateX(-${idx * itemWidth}px)`;
+          }
+
+          document.getElementById('partners-next').addEventListener('click', () => {
+            currentIndex = Math.min(currentIndex + 1, items.length - visibleCount);
+            slideTo(currentIndex);
+          });
+
+          document.getElementById('partners-prev').addEventListener('click', () => {
+            currentIndex = Math.max(currentIndex - 1, 0);
+            slideTo(currentIndex);
+          });
+
+          let autoSlide = setInterval(() => {
+            currentIndex = (currentIndex + 1) > (items.length - visibleCount) ? 0 : currentIndex + 1;
+            slideTo(currentIndex);
+          }, 3500);
+
+          carousel.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlide));
+          carousel.parentElement.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => {
+              currentIndex = (currentIndex + 1) > (items.length - visibleCount) ? 0 : currentIndex + 1;
+              slideTo(currentIndex);
+            }, 3500);
+          });
+        });
+      </script>
+     </section>
+  </main>
+
+  <footer class="bg-black text-white py-12">
+    <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="" alt="Logo" class="mb-4" />
+        <p class="text-sm">The Davor Agency is committed to providing exceptional real estate services, helping you find the perfect property with ease and confidence.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-start gap-2 text-sm">
+            <ion-icon name="location-outline"></ion-icon>
+            <address>Suite 407, The Fusion Wuye, FCT, Abuja</address>
+          </li>
+          <li class="flex items-center gap-2 text-sm">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+0123456789">+2347061612268, +2349044919927</a>
+          </li>
+          <li class="flex items-center gap-2 text-sm">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:davoragency@gmail.com">davoragency@gmail.com</a>
+          </li>
+        </ul>
+        <div class="flex gap-4 mt-4">
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+        </div>
+      </div>
+      <!-- Add 3 more footer columns with links -->
+    </div>
+    <div class="text-center text-sm mt-2 border-l-2 border-gray-700 pt-2">
+      &copy; 2025 <a href="#" class="text-orange-500 hover:underline">The Davor Agency</a>. All Rights Reserved
+    </div>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

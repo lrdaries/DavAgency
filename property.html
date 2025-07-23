@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Davor Agency | Abuja's Premier Real Estate Experts</title>
+  <meta name="description" content="The Davor Agency helps you find your dream home in Abuja. Explore luxury villas, apartments, and investment opportunities with expert guidance.">
+  <meta name="keywords" content="Real Estate, Abuja, Davor Agency, Property, Houses for Sale, Apartments, Nigeria Homes">
+  <meta name="author" content="The Davor Agency">
+  <meta property="og:title" content="The Davor Agency | Find Your Dream House in Abuja">
+  <meta property="og:description" content="Browse our listings of premium properties in Abuja. Buy, sell, or rent your next home with The Davor Agency.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davoragency.com">
+  <meta property="og:image" content="./assets/images/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+              }
+  </style>
+</head>
+
+<body class="bg-white overflow-x-hidden text-gray-800">
+  <!-- Header Section -->
+  <header class="sticky top-0 z-20">
+    <div class="bg-black py-4">
+      <div class="max-w-screen-xl mx-auto flex flex-wrap justify-center items-center gap-4 px-4">
+        <ul class="flex flex-wrap justify-center items-center gap-4 text-white text-sm font-bold">
+          <li>
+            <a href="mailto:info@davoragency.com" class="flex items-center gap-1 hover:text-orange-500">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>davoragency@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-1 hover:text-orange-500">
+              <ion-icon name="location-outline"></ion-icon>
+              <span id="address-link" class="cursor-pointer hover:text-orange-500">
+                <address class="inline">Suite 407, The Fusion Wuye, FCT, Abuja</address>
+              </span>
+              <div id="map-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                <div class="bg-white rounded-lg shadow-lg p-4 relative w-full max-w-2xl">
+                  <button id="close-map-modal" class="absolute top-2 right-3 text-gray-500 hover:text-orange-500 text-2xl">&times;</button>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15758.145558215461!2d7.425026!3d9.1059278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b3345541605%3A0x1bb7638373320f5e!2sThe%20Fusion%20Wuye!5e0!3m2!1sen!2sng!4v1752579937761!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                  const addressLink = document.getElementById('address-link');
+                  const mapModal = document.getElementById('map-modal');
+                  const closeMapModal = document.getElementById('close-map-modal');
+                  addressLink.addEventListener('click', () => {
+                    mapModal.classList.remove('hidden');
+                  });
+                  closeMapModal.addEventListener('click', () => {
+                    mapModal.classList.add('hidden');
+                  });
+                  mapModal.addEventListener('click', (e) => {
+                    if (e.target === mapModal) mapModal.classList.add('hidden');
+                  });
+                });
+              </script>
+              
+            </a>
+          </li>
+        </ul>
+        <div class="flex items-center gap-4 ml-auto">
+          <ul class="flex items-center gap-2 text-white text-lg">
+            <li><a href="https://web.facebook.com/profile.php?id=61575939821333"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/thedavoragency?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <!--<li><a href="#"><ion-icon name="logo-pinterest"></ion-icon></a></li>-->
+          </ul>
+          <a href="listing.html"><button class="bg-[#ff5733] text-white text-sm font-bold py-1 px-4 hover:bg-[#e04e2d]">Add Listing</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white py-6 shadow">
+      <div class="max-w-screen-xl mx-auto px-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold">THE DAVOR AGENCY</a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Home</a>
+         <!-- <a href="#about" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">About</a>
+          <a href="#service" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Services</a>
+          <a href="property.html" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Property</a>
+          <a href="#blog" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Blog</a>
+          <a href="#contact" class="text-gray-600 uppercase text-sm font-semibold hover:text-orange-500">Contact</a>-->
+        </nav>
+        
+      </div>
+    </div>
+  </header>
+    <!-- Hero Section -->  
+    <section id="home" class="bg-cover bg-center h-screen relative overflow-hidden" style="background-image: url('');">
+        <div id="hero-slide" class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center transform translate-x-full transition-transform duration-1000">
+            <div class="text-center text-white px-4">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Find Your Dream Home in Abuja</h1>
+                <p class="text-lg md:text-xl mb-8">Explore our exclusive listings of luxury villas, apartments, and investment opportunities.</p>
+                <!--<a href="#property" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-full transition duration-300">Browse Listings</a>-->
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(function () {
+                    document.getElementById('hero-slide').classList.remove('translate-x-full');
+                }, 900);
+            });
+        </script>
+    </section>
+    <!--  -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8"></h2>
+            <p class="text-lg text-gray-700 mb-6">The Davor Agency is your trusted partner in finding the perfect property in Abuja. With years of experience and a deep understanding of the local market, we are committed to helping you buy, sell, or rent your next home.</p>
+            <p class="text-lg text-gray-700">Our team of experts is dedicated to providing personalized service and expert guidance throughout the entire process. Whether you're looking for a luxury villa, a modern apartment, or an investment opportunity, we have the expertise to help you achieve your real estate goals.</p>
+        </div>
+    </section>
+    <!-- Services Section 
+    <section id="service" class="py-16 bg-white">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <ion-icon name="home-outline" class="text-4xl text-orange-500 mb-4"></ion-icon>
+                    <h3 class="text-xl font-semibold mb-2">Property Sales</h3>
+                    <p class="text-gray-700">We help you buy and sell properties with ease, ensuring a smooth transaction process.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <ion-icon name="key-outline" class="text-4xl text-orange-500 mb-4"></ion-icon>
+                    <h3 class="text-xl font-semibold mb-2">Property Management</h3>
+                    <p class="text-gray-700">Our team manages your property efficiently, maximizing its value and minimizing stress.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <ion-icon name="search-outline" class="text-4xl text-orange-500 mb-4"></ion-icon>
+                    <h3 class="text-xl font-semibold mb-2">Property Search</h3>
+                    <p class="text-gray-700">We assist you in finding the perfect property that meets your needs and budget.</p>
+                </div>
+            </div>
+        </div>  
+    </section>-->
+    <!-- Property Section -->
+    <section id="property" class="py-16 bg-gray-100">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Properties & Estates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./assets/images/property1.jpg" alt="Property 1" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Luxury Villa in Abuja</h3>
+                    <p class="text-gray-700 mb-4">A stunning 5-bedroom villa with modern amenities and a beautiful garden.</p>
+                    <a href="#" class="text-orange-500 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./assets/images/property2.jpg" alt="Property 2" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Modern Apartment</h3>
+                    <p class="text-gray-700 mb-4">A stylish 3-bedroom apartment located in the heart of Abuja.</p>
+                    <a href="#" class="text-orange-500 hover:underline">View Details</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="./assets/images/property3.jpg" alt="Property 3" class="w-full h-48 object-cover rounded-t-lg mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Investment Opportunity</h3>
+                    <p class="text-gray-700 mb-4">A prime commercial property with high rental yield potential.</p>
+                    <a href="#" class="text-orange-500 hover:underline">View Details</a>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+        <footer class="bg-black text-white py-12">
+    <div class="max-w-screen-xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+      <div>
+        <img src="" alt="Logo" class="mb-4" />
+        <p class="text-sm">The Davor Agency is committed to providing exceptional real estate services, helping you find the perfect property with ease and confidence.</p>
+        <ul class="mt-4 space-y-2">
+          <li class="flex items-start gap-2 text-sm">
+            <ion-icon name="location-outline"></ion-icon>
+            <address>Suite 407, The Fusion Wuye, FCT, Abuja</address>
+          </li>
+          <li class="flex items-center gap-2 text-sm">
+            <ion-icon name="call-outline"></ion-icon>
+            <a href="tel:+0123456789">+2347061612268, +2349044919927</a>
+          </li>
+          <li class="flex items-center gap-2 text-sm">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="mailto:davoragency@gmail.com">davoragency@gmail.com</a>
+          </li>
+        </ul>
+        <div class="flex gap-4 mt-4">
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+        </div>
+      </div>
+      <!-- Add 3 more footer columns with links -->
+    </div>
+    <div class="text-center text-sm mt-2 border-l-2 border-gray-700 pt-2">
+      &copy; 2025 <a href="#" class="text-orange-500 hover:underline">The Davor Agency</a>. All Rights Reserved
+    </div>
+  </footer>
+</body>
+</html>
