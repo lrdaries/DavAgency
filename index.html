@@ -133,11 +133,34 @@
       height: 500px;
       overflow: hidden;
     }
+     /* Default (mobile-first) */
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
   </style>
 </head>
 
 <body class="bg-white overflow-x-hidden text-gray-800">
-  <!-- Header Section -->
+  <!--<div class="w-screen h-2 bg-[#e04e2d] fixed top-0 left-0 z-[9999]"></div>
+   Header Section -->
   <header class="sticky top-0 z-20">
     <div class="bg-black py-4">
       <div class="max-w-screen-xl mx-auto flex flex-wrap justify-center items-center gap-4 px-4">
@@ -299,9 +322,9 @@
           </p>
           <button class="bg-[#ff5733] text-white font-semibold py-2 px-5 hover:bg-black hover:text-white transition">Make An Enquiry</button>
         </div>
-          <div class="relative w-full h-80 flex items-center justify-center">
+          <div class="relative w-full max-w-[1000px] h-80 flex items-center justify-center overflow-hidden">
             <!-- Carousel Images -->
-            <div id="carousel-images" class="w-full h-80 overflow-hidden rounded-lg relative">
+            <div id="carousel-images" class="w-full h-80  rounded-lg max-w-[1000px] relative">
               <img src="IMG-20250710-WA0003.jpg" class="absolute inset-0 w-fit h-fit object-cover object-center transition-opacity duration-700 opacity-100" style="aspect-ratio: auto;"/>
               <img src="IMG-20250710-WA0004.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
               <img src="IMG-20250710-WA0005.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
@@ -1004,3 +1027,4 @@
 </body>
 
 </html>
+   
